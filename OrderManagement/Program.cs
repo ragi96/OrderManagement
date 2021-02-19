@@ -1,11 +1,8 @@
 ﻿using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using OrderManagement.Database.Context;
-using OrderManagement.Database.Helper;
 
 namespace OrderManagement
 {
@@ -25,8 +22,6 @@ namespace OrderManagement
 
                     services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog());
                     services.AddScoped<OrderManagement>();
-                    services.AddDbContext<CustomerContext>(options => options.UseMySQL(""));
-                    services.AddTransient<DatabaseHelper>();
 
                     #endregion
 

@@ -227,7 +227,6 @@
     <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -327,9 +326,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OrderManagement.Database\OrderManagement.Database.csproj">
-      <Project>{DBD2AC18-D1E3-4819-99CF-CED45B8E607D}</Project>
-      <Name>OrderManagement.Database</Name>
+    <ProjectReference Include="..\OrderManagement.Core\OrderManagement.Core.csproj">
+      <Project>{cc78c164-7310-4eaf-ab2f-13ea036c438a}</Project>
+      <Name>OrderManagement.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderManagement.Data\OrderManagement.Data.csproj">
+      <Project>{fe5c362a-333a-431d-affb-958693f08b20}</Project>
+      <Name>OrderManagement.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

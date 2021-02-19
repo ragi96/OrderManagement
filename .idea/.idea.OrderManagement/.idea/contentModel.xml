@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="\vmware-host\Shared Folders\Dokumente\GitHub\OrderManagement" t="IncludeFlat">
+      <e p="OrderManagement.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\Claudius Rünger\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Claudius Rünger\AppData\Local\JetBrains\Rider2020.3\resharper-host\temp\Rider\v203\TempCaches\Solution.00" t="ExcludeRecursive" />
+  </component>
+</project>
