@@ -105,6 +105,10 @@
             // 
             // GrdYearlyCompare
             // 
+            this.GrdYearlyCompare.AllowUserToAddRows = false;
+            this.GrdYearlyCompare.AllowUserToDeleteRows = false;
+            this.GrdYearlyCompare.AllowUserToResizeColumns = false;
+            this.GrdYearlyCompare.AllowUserToResizeRows = false;
             this.GrdYearlyCompare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdYearlyCompare.Location = new System.Drawing.Point(8, 79);
             this.GrdYearlyCompare.Name = "GrdYearlyCompare";

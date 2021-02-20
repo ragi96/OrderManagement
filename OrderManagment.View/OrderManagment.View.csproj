@@ -80,6 +80,9 @@
     <EmbeddedResource Include="ArticleManagmentView.resx">
       <DependentUpon>ArticleManagmentView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerManagmentView.resx">
+      <DependentUpon>CustomerManagmentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderManagmentView.resx">
       <DependentUpon>OrderManagmentView.cs</DependentUpon>
     </EmbeddedResource>
