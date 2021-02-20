@@ -86,6 +86,9 @@
     <EmbeddedResource Include="StartView.resx">
       <DependentUpon>StartView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YearlyCompareView.resx">
+      <DependentUpon>YearlyCompareView.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
