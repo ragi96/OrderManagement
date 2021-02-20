@@ -1,12 +1,15 @@
-﻿using OrderManagement.Data.Model;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace OrderManagement.Core.Operations
 {
     public interface IDataOperations
     {
-        Task<Customers> Customers(Customers customer, OperationActions.Actions action);
+        Task<object> Create(object entity);
 
-        Task<Articles> Articles(Articles article, OperationActions.Actions action);
+        Task<object> Update(object entity, object newValues);
+
+        Task Delete(object entity);
+
+        Task<object> Get(object entity);
     }
 }

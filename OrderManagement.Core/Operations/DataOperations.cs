@@ -1,48 +1,91 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OrderManagement.Data.Context;
 using OrderManagement.Data.Model;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace OrderManagement.Core.Operations
 {
     public class DataOperations : IDataOperations
     {
-        private readonly DbContextOptions<DataContext> _dbContextOptions;
         private readonly DataContext _context;
 
         public DataOperations(DbContextOptions<DataContext> dbContextOptions)
         {
-            _dbContextOptions = dbContextOptions;
             _context = new DataContext(dbContextOptions);
         }
 
-        public async Task<Articles> Articles(Articles article, OperationActions.Actions action)
+        public async Task<object> Create(object entity)
         {
-            switch(action)
+            var currentContext = await DetermineDbSet(entity);
+
+            currentContext.Add(entity);
+            await _context.SaveChangesAsync();
+
+            return entity;
+        }
+
+        public async Task Delete(object entity)
+        {
+            var currentContext = await DetermineDbSet(entity);
+
+            currentContext.Remove(entity);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<object> Get(object entity)
+        {
+            var currentContext = await DetermineDbSet(entity);
+            var requestedEntity = await currentContext.SingleOrDefaultAsync(elem => elem == entity);
+
+            if(requestedEntity != null)
             {
-                case OperationActions.Actions.Create:
-                    _context.Add(article);
+                return requestedEntity;
+            }
+
+            return null;
+        }
+
+        public async Task<object> Update(object entity, object newValues)
+        {
+            var currentContext = await DetermineDbSet(entity);
+            var requestedEntity = await currentContext.SingleOrDefaultAsync(elem => elem == entity);
+
+            requestedEntity = newValues;
+            currentContext.Update(requestedEntity);
+
+            return entity;
+        }
+
+        private Task<DbSet<object>> DetermineDbSet(object entity) 
+        {
+            var currentType = default(object);
+
+            switch (entity)
+            {
+                case Articles _:
+                    currentType = _context.Articles;
                     break;
-                case OperationActions.Actions.Delete:
-                    _context.Remove(article);
+                case ArticleGroups _:
+                    currentType = _context.ArticleGroups;
                     break;
-                case OperationActions.Actions.Update:
-                    _context.Update(article);
+                case Customers _:
+                    currentType = _context.Customers;
                     break;
-                case OperationActions.Actions.Search:
-                    article = await _context.Articles.SingleOrDefaultAsync(elem => elem.Name.Equals(article.Name));
+                case Addresses _:
+                    currentType = _context.Addresses;
+                    break;
+                case OrderPositions _:
+                    currentType = _context.OrderPositions;
+                    break;
+                case Orders _:
+                    currentType = _context.Orders;
+                    break;
+                case Invoices _:
+                    currentType = _context.Invoices;
                     break;
             }
 
-            await _context.SaveChangesAsync();
-
-            return article;
-        }
-
-        public Task<Customers> Customers(Customers customer, OperationActions.Actions action)
-        {
-            throw new System.NotImplementedException();
+            return (Task<DbSet<object>>)currentType;
         }
     }
 }

@@ -18,5 +18,7 @@ namespace OrderManagement.Data.Context
         public DbSet<OrderPositions> OrderPositions { get; set; }
     
         public DbSet<Orders> Orders { get; set; }
+
+        public DbSet<Invoices> Invoices { get; set; }
     }
 }

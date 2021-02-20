@@ -126,6 +126,7 @@
     <Compile Include="Model\Articles.cs" />
     <Compile Include="Model\ArticleGroups.cs" />
     <Compile Include="Model\Customers.cs" />
+    <Compile Include="Model\OperationActions.cs" />
     <Compile Include="Model\OrderPositions.cs" />
     <Compile Include="Model\Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

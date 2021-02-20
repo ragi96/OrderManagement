@@ -8,6 +8,6 @@
 
         public double Price { get; set; }
 
-
+        public double Mwst { get; set; }
     }
 }
