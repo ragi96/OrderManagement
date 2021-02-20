@@ -76,6 +76,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ArticleManagmentView.resx">
+      <DependentUpon>ArticleManagmentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartView.resx">
       <DependentUpon>StartView.cs</DependentUpon>
     </EmbeddedResource>
