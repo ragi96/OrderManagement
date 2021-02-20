@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrderManagment.View
 {
-    public partial class Form1 : Form
+    public partial class YearlyCompareView : Form
     {
-        public Form1()
+        public YearlyCompareView()
         {
             InitializeComponent();
         }
