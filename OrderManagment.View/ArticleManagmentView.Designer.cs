@@ -30,17 +30,19 @@
         {
             this.TabArticle = new System.Windows.Forms.TabControl();
             this.TbpArticle = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GrdArticle = new System.Windows.Forms.DataGridView();
             this.TbpArticleGroupe = new System.Windows.Forms.TabPage();
             this.LblArticle = new System.Windows.Forms.Label();
             this.CmdSaveArticle = new System.Windows.Forms.Button();
             this.CmdSaveArticleGroups = new System.Windows.Forms.Button();
             this.LblArticlegroups = new System.Windows.Forms.Label();
-            this.TrvArticlegroupe = new System.Windows.Forms.TreeView();
+            this.TrvArticlegroups = new System.Windows.Forms.TreeView();
+            this.GridArticleGroups = new System.Windows.Forms.DataGridView();
             this.TabArticle.SuspendLayout();
             this.TbpArticle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdArticle)).BeginInit();
             this.TbpArticleGroupe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridArticleGroups)).BeginInit();
             this.SuspendLayout();
             // 
             // TabArticle
@@ -57,7 +59,7 @@
             // 
             this.TbpArticle.Controls.Add(this.CmdSaveArticle);
             this.TbpArticle.Controls.Add(this.LblArticle);
-            this.TbpArticle.Controls.Add(this.dataGridView1);
+            this.TbpArticle.Controls.Add(this.GrdArticle);
             this.TbpArticle.Location = new System.Drawing.Point(4, 22);
             this.TbpArticle.Name = "TbpArticle";
             this.TbpArticle.Padding = new System.Windows.Forms.Padding(3);
@@ -66,17 +68,18 @@
             this.TbpArticle.Text = "Artikel";
             this.TbpArticle.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // GrdArticle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 321);
-            this.dataGridView1.TabIndex = 0;
+            this.GrdArticle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdArticle.Location = new System.Drawing.Point(8, 54);
+            this.GrdArticle.Name = "GrdArticle";
+            this.GrdArticle.Size = new System.Drawing.Size(776, 321);
+            this.GrdArticle.TabIndex = 0;
             // 
             // TbpArticleGroupe
             // 
-            this.TbpArticleGroupe.Controls.Add(this.TrvArticlegroupe);
+            this.TbpArticleGroupe.Controls.Add(this.GridArticleGroups);
+            this.TbpArticleGroupe.Controls.Add(this.TrvArticlegroups);
             this.TbpArticleGroupe.Controls.Add(this.CmdSaveArticleGroups);
             this.TbpArticleGroupe.Controls.Add(this.LblArticlegroups);
             this.TbpArticleGroupe.Location = new System.Drawing.Point(4, 22);
@@ -125,12 +128,20 @@
             this.LblArticlegroups.TabIndex = 4;
             this.LblArticlegroups.Text = "Artikelgruppen";
             // 
-            // TrvArticlegroupe
+            // TrvArticlegroups
             // 
-            this.TrvArticlegroupe.Location = new System.Drawing.Point(14, 54);
-            this.TrvArticlegroupe.Name = "TrvArticlegroupe";
-            this.TrvArticlegroupe.Size = new System.Drawing.Size(770, 333);
-            this.TrvArticlegroupe.TabIndex = 6;
+            this.TrvArticlegroups.Location = new System.Drawing.Point(433, 54);
+            this.TrvArticlegroups.Name = "TrvArticlegroups";
+            this.TrvArticlegroups.Size = new System.Drawing.Size(351, 333);
+            this.TrvArticlegroups.TabIndex = 6;
+            // 
+            // GridArticleGroups
+            // 
+            this.GridArticleGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridArticleGroups.Location = new System.Drawing.Point(8, 54);
+            this.GridArticleGroups.Name = "GridArticleGroups";
+            this.GridArticleGroups.Size = new System.Drawing.Size(383, 333);
+            this.GridArticleGroups.TabIndex = 7;
             // 
             // ArticleManagmentView
             // 
@@ -143,9 +154,10 @@
             this.TabArticle.ResumeLayout(false);
             this.TbpArticle.ResumeLayout(false);
             this.TbpArticle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdArticle)).EndInit();
             this.TbpArticleGroupe.ResumeLayout(false);
             this.TbpArticleGroupe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridArticleGroups)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,11 +167,12 @@
         private System.Windows.Forms.TabControl TabArticle;
         private System.Windows.Forms.TabPage TbpArticle;
         private System.Windows.Forms.TabPage TbpArticleGroupe;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GrdArticle;
         private System.Windows.Forms.Button CmdSaveArticle;
         private System.Windows.Forms.Label LblArticle;
         private System.Windows.Forms.Button CmdSaveArticleGroups;
         private System.Windows.Forms.Label LblArticlegroups;
-        private System.Windows.Forms.TreeView TrvArticlegroupe;
+        private System.Windows.Forms.TreeView TrvArticlegroups;
+        private System.Windows.Forms.DataGridView GridArticleGroups;
     }
 }
