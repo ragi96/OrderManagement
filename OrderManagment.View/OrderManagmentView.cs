@@ -16,5 +16,10 @@ namespace OrderManagment.View
         {
             InitializeComponent();
         }
+
+        private void TbpOrders_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
